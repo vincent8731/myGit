@@ -1,0 +1,49 @@
+//
+// Prefix header for all source files of the 'WaterFlowDisplay' target in the 'WaterFlowDisplay' project
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_4_0
+#warning "This project uses features only available in iOS SDK 4.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import <QuartzCore/QuartzCore.h>
+    #import <MediaPlayer/MediaPlayer.h>
+    #import <CoreMedia/CoreMedia.h>
+    #import <MobileCoreServices/MobileCoreServices.h>
+    #import <AssetsLibrary/AssetsLibrary.h>
+    #import<MapKit/MapKit.h>
+    #import<CoreLocation/CoreLocation.h>
+    #import <CoreGraphics/CoreGraphics.h>
+
+    #import "urlController.h"
+    #import "JSON.h"
+    #import "landingIF.h"
+    #import "sharedClass.h"
+    #import "ASIHTTPRequest.h"
+    #import "MBProgressHUD.h"
+    #import "Archiver.h"
+    #import "Reachability.h"
+
+
+    #define ASIHTTP_TIME_OUT 20.0f
+    #define ASIFailed @"服务器连接异常"
+    #define ASIFailedSubTitle @"建议您检查网络后在试一试"
+    #define APP_CODING @"ELJ_I_MP_1.0"
+
+#endif
+
+
+
+#define SCREEN_WIDTH  [UIScreen mainScreen].bounds.size.width
+#define SCREEN_HEIGHT [UIScreen mainScreen].bounds.size.height-20
+#define NAV_BAR_HEIGHT 44
+
+#define UPLOAD_RETURN_URL @"http://192.168.1.13:8080/PtLbWeb/uploadIOS/find/picID/ios"
+
+#define UPLOAD_URL @"http://192.168.1.13:8080/PtLbWeb/uploadIOS/upload/pic/ios/%ld"
+
